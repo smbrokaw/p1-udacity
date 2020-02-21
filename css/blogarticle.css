@@ -1,0 +1,137 @@
+/* This file contains layout CSS specific to blogarticle.html, as well
+as visual styles that are unique on this page.  It imports
+other styles that are site-wide.  */
+
+@import "navbar.css";
+@import "header.css";
+@import "footer.css";
+@import "sitewide.css";
+
+/* Three layouts -- mobile, medium, and large */
+
+/* Mobile layout (default) */
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "navbar"
+        "search"
+        "blog-head"
+        "main"
+        "sidebar"
+        "foot"
+}
+
+/* Medium layout: Moves search to same line */
+@media (min-width: 500px) and (max-width: 900px) {
+    /* body {
+        background-color: yellow;
+    } */
+    .main-container {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "navbar search"
+            "blog-head blog-head"
+            "main main"
+            "sidebar sidebar"
+            "foot foot"
+    }
+}
+
+/* Large layout: Adds a sidebar for archive */
+@media (min-width: 901px) {
+    /* body {
+        background-color: red;
+    } */
+    .main-container {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "navbar search"
+            "blog-head blog-head"
+            "main sidebar"
+            "foot foot"
+    }
+}
+
+/* These are related to page-specific layout: */
+/* Visual styling of these elements can be found in navbar.css, header.css and footer.css */
+.navbar {
+    grid-area: navbar;
+}
+
+header {
+    grid-area: blog-head;
+}
+
+footer {
+    grid-area: foot;
+}
+
+/* These are specific to this page */
+main {
+    grid-area: main;
+    background-color: white;
+    padding: 20px;
+}
+
+article {
+    line-height: 1.5;
+}
+
+article h2 {
+    margin: 0;
+}
+
+.byline {
+    color: #666;
+    margin: 0;
+    font-size: 0.8em;
+}
+
+article blockquote {
+    padding: 10px;
+    border-left: 2px solid #2a7f8c;
+    font-size: 1.2em;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+}
+
+article figcaption {
+    color: #666;
+    font-size: 0.7em;
+}
+
+/* About the author / social media  */
+aside {
+    grid-area: sidebar;
+    background-color: #efefef;
+    padding: 10px;
+    padding-top: 0;
+}
+
+.auth-name {
+    font-weight: bold;
+}
+
+.auth-headshot img {
+    height: 100px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.auth-title,
+.auth-company {
+    font-size: 0.8em;
+}
+
+.auth-snippet {
+    margin: 10px 0;
+}

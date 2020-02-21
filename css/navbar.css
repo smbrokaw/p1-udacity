@@ -1,0 +1,38 @@
+/* Styles specific to top navbar */
+
+/* This block contains the subscribe link and the search bar */
+.navbar {
+    background-color: #444;
+    padding: 0;
+    color: #fff;
+    font-size: 0.9em;
+}
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: #fcdb62;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    padding: 10px;
+}
+
+.current-page {
+    color: #b3e9f2;
+    font-weight: 600;
+}
+
+.search {
+    background-color: #444;
+    padding: 10px;
+}

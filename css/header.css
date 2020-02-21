@@ -1,0 +1,13 @@
+/* This file contains visual styles for sitewide blog banner header.
+(Layout style definitions are contained in the main layout css file) */
+
+/* This block has the big title for the blog, and an image. */
+header {
+
+    background-color: #2a7f8c;
+    background-image: url(../images/magenta-quilt.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 10px;
+}

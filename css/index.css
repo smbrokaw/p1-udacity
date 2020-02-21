@@ -1,0 +1,134 @@
+/* This file contains layout CSS specific to index.html, as well
+as visual styles that are unique on this page.  It imports
+other styles that are site-wide.  */
+
+@import "navbar.css";
+@import "header.css";
+@import "footer.css";
+@import "sitewide.css";
+
+/* Three layouts -- mobile, medium, and large */
+
+/* Mobile layout (default) */
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "navbar"
+        "search"
+        "blog-head"
+        "cards"
+        "sidebar"
+        "foot"
+}
+
+/* Medium layout: Moves search to same line */
+@media (min-width: 500px) and (max-width: 900px) {
+    /* body {
+        background-color: yellow;
+    } */
+    .main-container {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "navbar search"
+            "blog-head blog-head"
+            "cards cards"
+            "sidebar sidebar"
+            "foot foot"
+    }
+}
+
+/* Large layout: Adds a sidebar for archive */
+@media (min-width: 901px) {
+    /* body {
+        background-color: red;
+    } */
+    .main-container {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "navbar search"
+            "blog-head blog-head"
+            "cards sidebar"
+            "foot foot"
+    }
+}
+
+/* These are related to page-specific layout: */
+/* Visual styling of these elements can be found in navbar.css, header.css and footer.css */
+.navbar {
+    grid-area: navbar;
+}
+
+header {
+    grid-area: blog-head;
+}
+
+footer {
+    grid-area: foot;
+}
+
+/* This container holds the cards that each show a blog snippet */
+main {
+    grid-area: cards;
+    background-color: white;
+    display: flex;
+    grid-area: cards;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+/* Card */
+article {
+    width: 250px;
+    margin: 20px;
+    background-color: #b3e9f2;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Card elements */
+.card-tag {
+    text-transform: uppercase;
+    font-weight: 500;
+    float: left;
+    font-size: 0.8em;
+}
+
+.card-dateline {
+    float: right;
+    font-size: 0.8em;
+}
+
+.card-img {
+    width: 250px;
+    height: 100px;
+}
+
+.card-title {
+    margin: 5px;
+}
+.card-title a {
+    text-decoration: none;
+}
+
+.card-title a:hover {
+    text-decoration: underline;
+}
+
+.card-snippet {
+    font-size: 1.0em;
+}
+
+/* List of archived blogposts  */
+aside {
+    grid-area: sidebar;
+    background-color: #efefef;
+    padding: 10px;
+}
