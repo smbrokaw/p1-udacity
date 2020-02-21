@@ -1,12 +1,13 @@
-/* Styles specific to top navbar */
+/* This file contains visual styles for sitewide navbar.
+(Layout style definitions are contained in the main layout css file) */
 
-/* This block contains the subscribe link and the search bar */
 .navbar {
     background-color: #444;
     padding: 0;
     color: #fff;
     font-size: 0.9em;
 }
+
 .navbar a {
     color: #fff;
     text-decoration: none;

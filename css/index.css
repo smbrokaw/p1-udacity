@@ -20,14 +20,11 @@ other styles that are site-wide.  */
         "blog-head"
         "cards"
         "sidebar"
-        "foot"
+        "foot";
 }
 
-/* Medium layout: Moves search to same line */
+/* Medium layout: Searchbox shares line with nav */
 @media (min-width: 500px) and (max-width: 900px) {
-    /* body {
-        background-color: yellow;
-    } */
     .main-container {
         display: grid;
         grid-template-columns: 1fr 200px;
@@ -37,15 +34,12 @@ other styles that are site-wide.  */
             "blog-head blog-head"
             "cards cards"
             "sidebar sidebar"
-            "foot foot"
+            "foot foot";
     }
 }
 
 /* Large layout: Adds a sidebar for archive */
 @media (min-width: 901px) {
-    /* body {
-        background-color: red;
-    } */
     .main-container {
         display: grid;
         grid-template-columns: 1fr 200px;
@@ -54,12 +48,12 @@ other styles that are site-wide.  */
             "navbar search"
             "blog-head blog-head"
             "cards sidebar"
-            "foot foot"
+            "foot foot";
     }
 }
 
-/* These are related to page-specific layout: */
-/* Visual styling of these elements can be found in navbar.css, header.css and footer.css */
+/* The following three are related to page-specific layout. */
+/* More visual styling of these elements can be found in navbar.css, header.css and footer.css */
 .navbar {
     grid-area: navbar;
 }
@@ -72,12 +66,11 @@ footer {
     grid-area: foot;
 }
 
-/* This container holds the cards that each show a blog snippet */
+/* Styles for the main area with cards */
 main {
     grid-area: cards;
-    background-color: white;
+    background-color: #fff;
     display: flex;
-    grid-area: cards;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: stretch;

@@ -20,14 +20,11 @@ other styles that are site-wide.  */
         "blog-head"
         "main"
         "sidebar"
-        "foot"
+        "foot";
 }
 
-/* Medium layout: Moves search to same line */
+/* Medium layout: Searchbox shares line with nav */
 @media (min-width: 500px) and (max-width: 900px) {
-    /* body {
-        background-color: yellow;
-    } */
     .main-container {
         display: grid;
         grid-template-columns: 1fr 200px;
@@ -37,15 +34,12 @@ other styles that are site-wide.  */
             "blog-head blog-head"
             "main main"
             "sidebar sidebar"
-            "foot foot"
+            "foot foot";
     }
 }
 
-/* Large layout: Adds a sidebar for archive */
+/* Large layout: Adds a sidebar for author and social media */
 @media (min-width: 901px) {
-    /* body {
-        background-color: red;
-    } */
     .main-container {
         display: grid;
         grid-template-columns: 1fr 200px;
@@ -54,12 +48,12 @@ other styles that are site-wide.  */
             "navbar search"
             "blog-head blog-head"
             "main sidebar"
-            "foot foot"
+            "foot foot";
     }
 }
 
-/* These are related to page-specific layout: */
-/* Visual styling of these elements can be found in navbar.css, header.css and footer.css */
+/* The following three are related to page-specific layout. */
+/* More visual styling of these elements can be found in navbar.css, header.css and footer.css */
 .navbar {
     grid-area: navbar;
 }
@@ -72,10 +66,10 @@ footer {
     grid-area: foot;
 }
 
-/* These are specific to this page */
+/* Styles for the main article area */
 main {
     grid-area: main;
-    background-color: white;
+    background-color: #fff;
     padding: 20px;
 }
 
@@ -109,7 +103,7 @@ article figcaption {
     font-size: 0.7em;
 }
 
-/* About the author / social media  */
+/* About the author / social media area  */
 aside {
     grid-area: sidebar;
     background-color: #efefef;
