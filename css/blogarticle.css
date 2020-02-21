@@ -22,6 +22,10 @@ other styles that are site-wide.  */
         "sidebar"
         "foot";
 }
+.product-flex-container {
+    display: flex;
+    flex-direction: column;
+}
 
 /* Medium layout: Searchbox shares line with nav */
 @media (min-width: 500px) and (max-width: 900px) {
@@ -36,6 +40,10 @@ other styles that are site-wide.  */
             "sidebar sidebar"
             "foot foot";
     }
+    .product-flex-container {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 /* Large layout: Adds a sidebar for author and social media */
@@ -49,6 +57,10 @@ other styles that are site-wide.  */
             "blog-head blog-head"
             "main sidebar"
             "foot foot";
+    }
+    .product-flex-container {
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -128,4 +140,13 @@ aside {
 
 .auth-snippet {
     margin: 10px 0;
+}
+
+/* Materials I Love section. NOTE that direction is determined in layout above */
+.product {
+    width: 150px;
+    border-radius: 10px;
+    background-color: #b3e9f2;
+    padding: 10px;
+    margin: 10px;
 }
